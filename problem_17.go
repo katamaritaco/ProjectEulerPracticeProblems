@@ -24,7 +24,7 @@ func main() {
     thirteen, fourteen, eighteen, nineteen := 8, 8, 8, 8;
     seventeen := 9;
 
-    fourty, fifty, sixty := 5, 5, 5;
+    forty, fifty, sixty := 5, 5, 5;
     twenty, thirty, eighty, ninety := 6, 6, 6, 6;
     seventy := 7;
 
