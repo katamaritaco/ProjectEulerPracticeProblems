@@ -34,6 +34,8 @@ func main() {
 	2) Convert all types to int64.
 	3) Implement Power Function for int64. [Look at Knuth's way]
 
+	4) Leo's suggestion of "start at sqrt(n), because you need a = a*a". Could be helpful if I'm misreading the question. Could give false answers if he is misreading the question.
+
     //TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO */
 
 
