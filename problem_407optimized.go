@@ -20,8 +20,8 @@ const MAX = 10000000; // 10 ^ 7;
 //Using float64 because the largest possible number, 10 ^ 14 is within the bounds of float64 with no precision loss...
 func main() {
 
-    var countOfMaxVals int64 = 0;
-    var countOfMaxValsTotal int64 = 0;
+    // var countOfMaxVals int64 = 0;
+    // var countOfMaxValsTotal int64 = 0;
 
 
     //var sum float64 = 0;
@@ -29,15 +29,15 @@ func main() {
 
 
     /*TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
-	1)   Calculate 1, 2, ..., 10**7 and store in an array. Should be 80mb -> totally manageable.
-	1.5) Instead of calculating the powers each time, iterate through the above array and use those numbers instead.
+	1)   DONE Calculate 1, 2, ..., 10**7 and store in an array. Should be 80mb -> totally manageable.
+	1.5) DONE Instead of calculating the powers each time, iterate through the above array and use those numbers instead.
 
-	If 1) doesn't work out super nicely, look into 2) and 3)
+	If 1) doesn't work out super nicely, look into 2) and 3) //NOTE: Definitely does not work nicely :] Too slow.
 
-	2) Convert all types to int64.
+	2) DONE(with exception of power function) Convert all types to int64.
 	3) Implement Power Function for int64. [Look at Knuth's way]
 
-	4) Leo's suggestion of "start at sqrt(n), because you need a = a*a". Could be helpful if I'm misreading the question. Could give false answers if he is misreading the question.
+	4) Leo's suggestion of "start at sqrt(n), because you need a = a*a". Might be slightly helpful, but not a large complexity change.
 
     //TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO */
 
@@ -60,18 +60,22 @@ func main() {
         var a int64 = 0;
         for ; a < n; a++ {
             
-            val := squareArray[a] % n;
-            if mOfN < val {
-                mOfN = val;
+            // val := squareArray[a] % n;
+            // if mOfN < val {
+            //     mOfN = val;
 
-                if mOfN == ( n - 1 ) { //early out if max value is found
-                    // fmt.Printf("FOUND MAX: %v\n", n);
-                    countOfMaxValsTotal++;
-                    countOfMaxVals++;
-                    break;
-                }
+            //     if mOfN == ( n - 1 ) { //early out if max value is found
+            //         // fmt.Printf("FOUND MAX: %v\n", n);
+            //         countOfMaxValsTotal++;
+            //         countOfMaxVals++;
+            //         break;
+            //     }
+            // }
+
+            //I originally misread the problem. I have to take the highest a s/t a^2 mod n equals a mod n for all n from 1 <= n <= MAX
+            if squareArray[a] % n == a % n {
+                mOfN = a;
             }
-
 
 
         }
@@ -98,9 +102,12 @@ func main() {
     	// 	fmt.Printf( "Line: %v\n", n );
     	// }
 
+
+
         if n % 1000 == 0 {
-            fmt.Printf( "Line: %v | %v | %v\n", n, countOfMaxValsTotal, countOfMaxVals );
-            countOfMaxVals = 0;
+            fmt.Printf( "Line: %v\n", n );
+            // fmt.Printf( "Line: %v | %v | %v\n", n, countOfMaxValsTotal, countOfMaxVals );
+            // countOfMaxVals = 0;
         }
 
     }
@@ -110,6 +117,7 @@ func main() {
 }
 
 
+//Time to run this is negligible. 80mb for 10 million elements should be fine as well.
 func calculateSquaresBetweenRange( start int64, end int64 ) [ ]int64 {
 
     squareArray := make ( []int64, end - start );
