@@ -17,6 +17,8 @@ import (
 
 const MAX = 10000000; // 10 ^ 7;
 
+//NOTE: not really working on this. Planning on deleting soon.
+
 //Using float64 because the largest possible number, 10 ^ 14 is within the bounds of float64 with no precision loss...
 func main() {
 
