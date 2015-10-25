@@ -8,6 +8,12 @@ And F2749, which contains 575 digits, is the first Fibonacci number for which th
 Given that Fk is the first Fibonacci number for which the first nine digits AND the last nine digits are 1-9 pandigital, find k.
 */
 
+/*TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+
+This is super slow, so I'll need to optimize... Still gets correct answer though...
+
+//TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO */
+
 package main
 
 import (
@@ -87,6 +93,7 @@ func main() {
 			//if z is pandigital for last 9 digits
 			arg, _ = strconv.Atoi( y.String()[ len( y.String() ) - 9 : ] );
 			if isPandigital( arg ) {
+				//Don't forget to add four to this answer, since my counts are offsetted :3
 				fmt.Printf( "Found Initial and Final Pandigital Index at: %v\n\n%v\n", y, i );
 				break;
 			}
@@ -108,7 +115,7 @@ func main() {
 
 }
 
-//will only take a number that is 9 digits long.
+//will only take a number that is 9 digits long, testing numbers between 1 - 9.
 func isPandigital( x int ) bool {
 
 	var arr [ 10 ]int;
