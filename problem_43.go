@@ -15,6 +15,18 @@ Find the sum of all 0 to 9 pandigital numbers with this property.
 
 */
 
+/*TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+
+This is super slow, so I'll need to optimize... Still gets the correct answer as is.
+
+1) Since the last three digits need to be divisible by 17, we can increase by 17 rather than 1 in our for loop.
+
+2) Likewise, there are a lot more of these little tricks we can do -> zB adding 1000000 (six zeros) to i when we get a d4 that is odd (ex 1405000000), since we know that d4 must be even.
+	With these tricks, we'll have to manage them carefully...
+
+//TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO */
+
+
 package main
 
 import (
