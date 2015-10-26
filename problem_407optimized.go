@@ -29,6 +29,10 @@ If 1) doesn't work out super nicely, look into 2) and 3) //NOTE: Definitely does
     5a) Goroutines -> learn more about them
     5b) Create a program that splits up problem into chunks of 10,000 or whatnot. Get sum for each part. Add together at the end.
 
+
+
+UPDATE: This solves the problem, but is off by one. I am investigating :3
+
 //TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO */
 
 
