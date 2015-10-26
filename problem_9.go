@@ -16,6 +16,8 @@ Different ways to approach it. I'll try brute forcing and then maybe optimizing 
 
 NOTE: there are off by ones and bad optimizations, but oh well for now :3
 
+Solved but code is terrible :3
+
 //TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO */
 
 
