@@ -10,32 +10,32 @@ Format this readme so this is nice to read, clickable links to problems, and say
 Benchmark the solutions to know how fast or slow they are...
 
 
-Problem 1
-Problem 2
-Problem 3
-Problem 4
-Problem 5
+* Problem 1
+* Problem 2
+* Problem 3
+* Problem 4
+* Problem 5
 
-Problem 9
+* Problem 9
 
-Problem 11
+* Problem 11
 
-Problem 13
-Problem 14
+* Problem 13
+* Problem 14
 
-Problem 16
-Problem 17
+* Problem 16
+* Problem 17
 
-Problem 20
+* Problem 20
 
-Problem 25
+* Problem 25
 
-Problem 30
+* Problem 30
 
-Problem 43
+* Problem 43
 
-Problem 63
+* Problem 63
 
-Problem 104
+* Problem 104
 
-Problem 407
+* Problem 407
