@@ -9,6 +9,8 @@ Format this readme so this is nice to read, clickable links to problems, and say
 
 Benchmark the solutions to know how fast or slow they are...
 
+* Template for new problems
+
 
 * Problem 1
 * Problem 2
