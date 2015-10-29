@@ -8,6 +8,8 @@ TODO:
 Format this readme so this is nice to read, clickable links to problems, and says not only which ones I have completed, but also which ones I have posted on the forums about.
 
 Benchmark the solutions to know how fast or slow they are...
+This is how I'm doing it as is on my windows machine. Elegant, non? :P
+echo %time% && go run XXX.go && echo %time%
 
 * Template for new problems
 
@@ -33,6 +35,8 @@ Benchmark the solutions to know how fast or slow they are...
 * Problem 25
 
 * Problem 30
+
+* Problem 32
 
 * Problem 43
 
