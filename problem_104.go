@@ -12,6 +12,8 @@ Given that Fk is the first Fibonacci number for which the first nine digits AND 
 
 This is super slow, so I'll need to optimize... Still gets correct answer though...
 
+Can also convert pandigital function to use bit shifts...
+
 //TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO */
 
 package main
