@@ -59,7 +59,7 @@ func main() {
 
     for i := 10; i < MAX; i++ { //see if bounds should be changed to 1 or whatnot. 10 is first digital factorial. Probably doesn't matter for problem anyways,
     	
-    	chainMap = make(map[int]int);
+    	chainMap = make(map[int]int); // should I keep remaking or use 'init()'?
     	j, intermediateVal := 1, i;
 
     	for ; j < CHAIN_SIZE_MAX; j++ { //Problem states that "the longest non-repeating chain with a starting number below one million is sixty terms", so we check all.
