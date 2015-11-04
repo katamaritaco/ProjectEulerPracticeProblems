@@ -17,6 +17,9 @@ This brute force solution clearly won't work. I'll have to actually put some tho
 One thought:
 iterate by digit rather than just keep going up, or some other way that we can drastically reduce our calculations
 
+
+can create a lookup table for 0! - 9! instead of calculating each time.
+
 //TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO */
 
 
@@ -36,7 +39,7 @@ func main() {
 
 	var i int64 = 10;
 	for ; i < UPPER_BOUND; i++ {
-		if digitFactorial( i ) == i {
+		if digitFactorialSum( i ) == i {
 			fmt.Println( i );
 			sum += i;
 
@@ -51,7 +54,11 @@ func main() {
 
 
 
-func digitFactorial( x int64 ) int64 {
+func digitFactorialSum( x int64 ) int64 {
+
+	if x == 0 {
+		return 1;
+	}
 
 	var sum int64 = 0;
 
@@ -72,7 +79,7 @@ func digitFactorial( x int64 ) int64 {
 func factorial( x int64 ) int64 {
 
 	if x == 0 {
-		return 0;
+		return 1;
 	}
 	if x < 0 {
 		return -1;
