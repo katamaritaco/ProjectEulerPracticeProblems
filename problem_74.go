@@ -30,6 +30,8 @@ convert from map to array. would that be faster? Complexity says no..
 
 Finishes in about 6 seconds. Good enough for now.
 
+keep track of the chain sizes for a given number. if you come across it again, you'll know the size...
+
 //TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO */
 
 
