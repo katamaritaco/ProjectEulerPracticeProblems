@@ -14,6 +14,18 @@ What is most amazing is that EVERY starting number will eventually arrive at 1 o
 How many starting numbers below ten million will arrive at 89?
 */
 
+
+/*TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+
+Fast, but I can make it better.
+Using current solution, I can just memoize the squares so we don't have to do those calculations.
+
+Also, the combinatoric approach makes a lot of sense. zB: 123 is the same result as 132, 213, 231, 312, 321, 1023, etc.
+Look into the multinomial coefficient in order to do this.
+
+//TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO */
+
+
 package main
 
 import "fmt"
