@@ -21,7 +21,6 @@ import "fmt"
 const MAX = 10000000 //ten million
 
 func main() {
-    fmt.Printf( "hello, world!\n" );
 
 
     //NOTE: 9,999,999, the highest number before 10,000,000 has a square digit sum of 567.
@@ -38,29 +37,67 @@ func main() {
     var chainMap map[int]int;
     chainMap = make(map[int]int);
 
+    elemsToAddToChainMap := make( []int, 1 );//can keep this tiny because we won't need it after a while.
+
+
     numArrivingAt89 := 0;
 
-    for i := 0; i < MAX; i++ {
+    for i := 1; i < MAX; i++ {
 
+        //Get the first number after the starting number
+        iSquareSum := digitSquareSum( i );
 
+        elemsToAddToChainMap = elemsToAddToChainMap[:0];
 
-    	//for until we find 89 or 1
-	    	//get next number in chain.
+        //for until we find 89 or 1
+        for {
 
 	    	//check to see if it is in the map
 	    	//if in map, we're done.
-	    		//if 89, add to numArrivingAt89. else, nada
+            if chainMap[iSquareSum] == 1 || iSquareSum == 1{
+                iSquareSum = 1; // force this to be 1 so we can populate our map correctly
+                // fmt.Printf( "Found 1: %v\n", i );
+                break;
+            } else if chainMap[iSquareSum] == 89 || iSquareSum == 89{ //if 89, add to numArrivingAt89. else, nada
+                numArrivingAt89++;
+                iSquareSum = 89; // force this to be 89 so we can populate our map correctly
+                // fmt.Printf( "Found 89: %v\n", i );
+                break;
+            } else { //else not in map, add this val to a list (use slice instead).
+                elemsToAddToChainMap = append(elemsToAddToChainMap, iSquareSum);
+                // fmt.Printf( "Have to append: %v\n", iSquareSum );
+            }
 
-	    	//else not in map, add this val to a list (use slice instead).
+            //get next number in chain.
+            iSquareSum = digitSquareSum( iSquareSum );
 
-
-
+        }
 
     	//if slice has anything in it, populate the chainMap with vals
+        for _, val := range elemsToAddToChainMap {
+            chainMap[val] = iSquareSum;
+        }
 
     }
 
+    // //////////TESTING: testing digitSquareSum
+    // fmt.Printf( "Test 123: %v | Test 4: %v | Test 24: %v | Test 9,999,999: %v | Test 0: %v\n", digitSquareSum( 123 ), digitSquareSum( 4 ), digitSquareSum( 24 ), digitSquareSum( 9999999 ), digitSquareSum( 0 ) )
+    // fmt.Printf( "chainMap: %v\n", chainMap );
 
     fmt.Printf( "Number of starting numbers reaching 89: %v\n", numArrivingAt89 );
 
+}
+
+
+//get each digit. square that digit. add to sum.
+func digitSquareSum( x int ) int {
+
+    sumOfSquareDigits := 0;
+
+    for x != 0 {
+        sumOfSquareDigits += ( (x % 10) * (x % 10) );
+        x /= 10;
+    }
+
+    return sumOfSquareDigits;
 }
