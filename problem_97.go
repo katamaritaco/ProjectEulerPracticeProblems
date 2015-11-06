@@ -7,6 +7,14 @@ However, in 2004 there was found a massive non-Mersenne prime which contains 2,3
 Find the last ten digits of this prime number.
 */
 
+
+/*TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+
+Can probably optimize by not iterating 1 < 7830457. Can do squares and mult. together. zB: 2**19 = 2**16 * 2**2 * 2. Can find the right powers from binary conversion.
+
+//TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO */
+
+
 package main
 
 import "fmt"
