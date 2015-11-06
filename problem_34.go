@@ -28,14 +28,11 @@ package main
 
 import "fmt"
 
-const UPPER_BOUND = 1000000000000 //one trillion b/c #yoloswag :3
+const UPPER_BOUND = 1000000 //one million b/c #yoloswag :3
 
 func main() {
 
-
 	var sum int64 = 0;
-
-
 
 	var i int64 = 10;
 	for ; i < UPPER_BOUND; i++ {
@@ -51,7 +48,6 @@ func main() {
 
     fmt.Printf( "Sum of all numbers: %v\n", sum );
 }
-
 
 
 func digitFactorialSum( x int64 ) int64 {
@@ -71,8 +67,6 @@ func digitFactorialSum( x int64 ) int64 {
 	return sum;
 
 }
-
-
 
 
 //only works for positive ints
