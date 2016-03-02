@@ -24,6 +24,10 @@ for each i, find s(i) by checking remainder(mod) of m[1],...,m[a lot] % i
 'Smarter' way:
 since s(25) = 10, does that mean s(50) and s(75), ... equal 10 if m! is > i?
 
+Other thoughts:
+Once you get a huge list of m! values, for each of those values, find a list of factors. 
+Then, go through those lists in order, checking off the 'i' value in a masterList(2,...,10**8) for each first occurence. 
+
 //TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO */
 
 
